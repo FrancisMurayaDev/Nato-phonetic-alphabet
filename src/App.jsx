@@ -39,9 +39,9 @@ const natoPhoneticAlphabet = {
   8: "Eight",
   9: "Nine",
   "!": "Exclamation mark",
-  "\"": "Double quote",
+  '"': "Double quote",
   "#": "Hash",
-  "$": "Dollar sign",
+  $: "Dollar sign",
   "%": "Percent sign",
   "&": "Ampersand",
   "'": "Apostrophe",
@@ -64,27 +64,26 @@ const natoPhoneticAlphabet = {
   "\\": "Backslash",
   "]": "Right square bracket",
   "^": "Caret",
-  "_": "Underscore",
+  _: "Underscore",
   "`": "Grave accent",
   "{": "Left curly brace",
   "|": "Vertical bar",
   "}": "Right curly brace",
-  "~": "Tilde"
-
+  "~": "Tilde",
 };
 
 function App() {
-
-  const [userInput, setUserInput] = useState('');
+  const [userInput, setUserInput] = useState("");
 
   const handleInputChange = (e) => {
     const value = e.target.value.toUpperCase();
     setUserInput(value);
-  }
+  };
 
   const convertToPhonetic = (text) => {
-    return text.split(``).map((char, index) => {const phonetic = natoPhoneticAlphabet[char] || char;
-      const cssColorClass = index % 2 === 0 ? 'blue' : 'red';
+    return text.split(``).map((char, index) => {
+      const phonetic = natoPhoneticAlphabet[char] || char;
+      const cssColorClass = index % 2 === 0 ? "blue" : "red";
 
       return (
         <span key={index} className={cssColorClass}>
@@ -93,25 +92,27 @@ function App() {
           <span>&nbsp;</span>
         </span>
       );
-  });
-}
-
+    });
+  };
 
   return (
     <div className="container">
       <h1 className="title">nato phonetic alphabet</h1>
-      <p className="p-text">convert text to <a href="">nato phonetic alphabet</a></p>
-      <input className="input-text" type="text" placeholder="Type Your Text Here..." onChange={handleInputChange}/>
+      <p className="p-text">
+        convert text to <a href="">nato phonetic alphabet</a>
+      </p>
+      <input
+        className="input-text"
+        type="text"
+        placeholder="Type Your Text Here..."
+        onChange={handleInputChange}
+      />
 
       <p className="output-phonetic">
-
         {userInput && convertToPhonetic(userInput)}
-        
       </p>
-
     </div>
-  )
+  );
 }
 
-export default App
-
+export default App;

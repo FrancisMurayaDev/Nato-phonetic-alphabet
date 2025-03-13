@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 
-.title{
+.title {
   text-transform: uppercase;
   color: #4f959d;
   font-size: 3.5rem;
@@ -30,7 +30,6 @@
   text-decoration: underline;
   font-weight: 500;
 }
-
 
 .input-text {
   text-transform: capitalize;
