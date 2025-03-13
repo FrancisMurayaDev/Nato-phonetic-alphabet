@@ -99,7 +99,13 @@ function App() {
     <div className="container">
       <h1 className="title">nato phonetic alphabet</h1>
       <p className="p-text">
-        convert text to <a href="">nato phonetic alphabet</a>
+        convert text to{" "}
+        <a
+          href="https://www.walkie-talkie-radio.co.uk/information/radio-standard-nato-phonetic-alphabet#:~:text=The%20standard%20%22NATO%22%20phonetic%20alphabet,%2Dray%2C%20Yankee%2C%20Zulu."
+          target="_blank"
+        >
+          nato phonetic alphabet
+        </a>
       </p>
       <input
         className="input-text"
@@ -110,6 +116,12 @@ function App() {
 
       <p className="output-phonetic">
         {userInput && convertToPhonetic(userInput)}
+      </p>
+      <p className="copyright">
+        <a href="https://www.linkedin.com/in/francis-muraya/" target="_blank">
+          &copy; FrancisMurayaDev
+        </a>{" "}
+        2025
       </p>
     </div>
   );
